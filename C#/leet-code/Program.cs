@@ -13,6 +13,7 @@ namespace leet_code
         {
             foreach (TestCase test in Valid_parentheses.testCases)
             {
+
                 test.checkCase(Valid_parentheses.IsValid(test.tCase));
             }
         }
@@ -47,10 +48,10 @@ namespace leet_code
                 {
                     textCase = tCase.ToString();
                 }
-                if (inputResult = tResult) Console.WriteLine(
-                    "Test Status: " +
-                    ((inputResult = tResult) ? "Passed!" : "Failed!") +
-                    " for following data input: " + tCase);
+                if (inputResult == tResult) Console.WriteLine(
+                    ((inputResult == tResult) ? "Passed!" : "Failed!") +
+                    " for following data input: " + tCase +
+                    " we got answer: " + inputResult);
             }
 
         }
