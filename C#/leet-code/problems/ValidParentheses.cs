@@ -12,7 +12,7 @@ namespace leet_code.problems
     /*
      * https://leetcode.com/problems/valid-parentheses/
      */
-    internal class Valid_parentheses
+    internal class ValidParentheses
     {
         //TEST CASES
         public static TestCase[] testCases =

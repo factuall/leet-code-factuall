@@ -11,10 +11,16 @@ namespace leet_code
     {
         static void Main(string[] args)
         {
-            foreach (TestCase test in Valid_parentheses.testCases)
+            /*foreach (TestCase test in ValidParentheses.testCases)
             {
 
-                test.checkCase(Valid_parentheses.IsValid(test.tCase));
+                test.checkCase(ValidParentheses.IsValid(test.tCase));
+            }*/
+
+            foreach (TestCase test in BasicCalculatorII.testCases)
+            {
+
+                test.checkCase(BasicCalculatorII.Calculate(test.tCase));
             }
         }
     }
@@ -25,6 +31,12 @@ namespace leet_code
         dynamic tResult;
 
         public TestCase(string tCase, bool tResult)
+        {
+            this.tCase = tCase;
+            this.tResult = tResult;
+        }
+
+        public TestCase(string tCase, int tResult)
         {
             this.tCase = tCase;
             this.tResult = tResult;
@@ -48,9 +60,9 @@ namespace leet_code
                 {
                     textCase = tCase.ToString();
                 }
-                if (inputResult == tResult) Console.WriteLine(
+                Console.WriteLine(
                     ((inputResult == tResult) ? "Passed!" : "Failed!") +
-                    " for following data input: " + tCase +
+                    " for following data input: " + textCase +
                     " we got answer: " + inputResult);
             }
 
